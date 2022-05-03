@@ -6,8 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class AccountController {
-    @GetMapping
+    @GetMapping("/login")
     public String loginPage(){
-        return "/account/login";
+        return "/accounts/login";
+    }
+    @GetMapping("/register")
+    public String registerPage(Model model){
+
+        return "/accounts/register";
     }
 }

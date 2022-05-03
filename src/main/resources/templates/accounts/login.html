@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Đăng nhập</title>
-	<link rel="stylesheet" th:href="@{css/common.css}">
-	<link rel="stylesheet" th:href="@{css/login.css}">
-	<script th:src="@{js/login.js}"></script>
+	<link rel="stylesheet" th:href="@{/css/common.css}">
+	<link rel="stylesheet" th:href="@{/css/login.css}">
+	<script th:src="@{/js/login.js}"></script>
 </head>
 
 
@@ -33,7 +33,7 @@
 
 			</form>
 			<br>
-			<p>Bạn đã chưa có tài khoản?<a href="/register">Đăng ký.</a></p>
+			<p>Bạn đã chưa có tài khoản?<a th:href="@{/register}">Đăng ký.</a></p>
 			<p>Bạn quên mật khẩu?<a href="/reset-password">Đặt lại mật khẩu.</a></p>
 		</div>
 	</div>
