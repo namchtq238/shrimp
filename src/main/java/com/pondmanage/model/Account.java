@@ -1,7 +1,7 @@
 package com.pondmanage.model;
 
 import com.sun.istack.NotNull;
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -9,7 +9,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "account")
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

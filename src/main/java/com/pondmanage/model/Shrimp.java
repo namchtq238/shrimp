@@ -32,7 +32,7 @@ public class Shrimp {
     @Column(name = "harvest_time")
     private Instant harvestTime;
 
-    @Column(name = "condition")
+    @Column(name = "condition_int")
     private Integer condition;
 
     @ManyToOne(fetch = FetchType.LAZY)

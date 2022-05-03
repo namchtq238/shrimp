@@ -19,7 +19,7 @@ public class Diet {
     @Column(name = "long_time")
     private Integer longTime;
 
-    @Column(name = "condition")
+    @Column(name = "condition_int")
     private Integer condition;
 
     @ManyToOne(fetch = FetchType.LAZY)

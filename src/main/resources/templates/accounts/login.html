@@ -17,7 +17,7 @@
 		<div class="content-account-form">
 			<img class="logo" th:src="@{img/logo.png}">
 			<p class="title-account-form"><b>Đăng Nhập</b></p>
-			<form th:action="@{/authenticate}" method="post" >
+			<form th:action="@{/authenticate}" method="post">
 				<div>
 					<input type="email" placeholder="Email" class="input-email" name="email" id="input-email">
 					<br>
@@ -34,7 +34,7 @@
 			</form>
 			<br>
 			<p>Bạn đã chưa có tài khoản?<a th:href="@{/register}">Đăng ký.</a></p>
-			<p>Bạn quên mật khẩu?<a href="/reset-password">Đặt lại mật khẩu.</a></p>
+			<p>Bạn quên mật khẩu?<a th:href="@{/changePassword}">Đặt lại mật khẩu.</a></p>
 		</div>
 	</div>
 </body>

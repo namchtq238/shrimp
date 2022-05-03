@@ -38,14 +38,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/resources/**").permitAll()
                 .antMatchers("/js/**", "/css/**", "/img/**").permitAll()
-                .antMatchers("/login", "/register").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/login", "/register", "/changePassword").permitAll()
+                .anyRequest().authenticated() //bao giờ sửa luồng đăng nhập thì xoá /changePassword đi
                 .and()
                 .formLogin()
                 .loginPage("/login")
                 .usernameParameter("email")
                 .loginProcessingUrl("/authenticate") // trỏ cái url của cái form đăng ký vào url này
-                .successForwardUrl("/home")
+                .defaultSuccessUrl("/home")
                 .permitAll()
                 .and()
                 .logout()
