@@ -32,6 +32,10 @@
 				</div>
 
 			</form>
+			<div th:if="${param.error}" class="alert alert-danger">
+				Invalid username and password.
+			</div>
+
 			<br>
 			<p>Bạn đã chưa có tài khoản?<a th:href="@{/register}">Đăng ký.</a></p>
 			<p>Bạn quên mật khẩu?<a th:href="@{/changePassword}">Đặt lại mật khẩu.</a></p>

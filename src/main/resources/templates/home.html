@@ -17,12 +17,22 @@
 			<a href="/home"><img class="home-logo" th:src="@{img/logo_main.png}" alt=""></a>
 			<div class="midle-header"></div>
 			<div class="right-header">
+
 				<img class="notify" th:src="@{img/notification_icon_15px.png}"></img>
 				<img class="account" th:src="@{img/account_icon_15px.png}"></img>
+
+
+
 			</div>
 		</div>
-		<div>
+		<div>-
+			<!--the? a dung de logout, cam' vao dau cung~ chay dc-->
 			<div class="nav">
+				<a class="nav-item" th:href="@{/logout}">
+					<img th:src="@{img/zone_icon_60px.png}" alt="">
+					<p>LOGOUT</p>
+				</a>
+				<br>
 				<a class="nav-item" href="/zones">
 					<img th:src="@{img/zone_icon_60px.png}" alt="">
 					<p>Khu Nuôi</p>
