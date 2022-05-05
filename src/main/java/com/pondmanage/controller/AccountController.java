@@ -49,6 +49,6 @@ public class AccountController {
     public String handleChangePassword(@Valid PasswordDTO passwordDTO, BindingResult result){
         if (result.hasErrors()) return "redirect:/changePassword";
         accountService.changePassword(passwordDTO);
-        return "home";
+        return "redirect:/home";
     }
 }

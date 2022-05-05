@@ -28,17 +28,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService());
         authProvider.setPasswordEncoder(passwordEncoder());
-
         return authProvider;
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-        http.authorizeRequests()
+        http.authorizeRequests()// phan quyen truy cap url
                 .antMatchers("/resources/**").permitAll()
-                .antMatchers("/js/**", "/css/**", "/img/**").permitAll()
-                .antMatchers("/login", "/register", "/changePassword").permitAll()
+                .antMatchers("/js/**", "/css/**", "/img/**").permitAll() // 38 39 cho phep truy cập tai fnguyeen css/js/static image
+                .antMatchers("/login", "/register", "/changePassword").permitAll() // cho phép các trang đăng ký được truy cập
+
                 .anyRequest().authenticated() //bao giờ sửa luồng đăng nhập thì xoá /changePassword đi
                 .and()
                 .formLogin()
